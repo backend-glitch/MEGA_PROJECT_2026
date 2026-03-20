@@ -1,4 +1,4 @@
-# 🚀 GSAP Animated Portfolio
+# 🚀 WEB WORLD
 
 A modern, interactive developer portfolio built using **HTML, CSS, JavaScript, and GSAP**.  
 This project showcases multiple JavaScript projects with smooth scroll-based animations and section transitions.
