@@ -30,7 +30,7 @@ This project showcases multiple JavaScript projects with smooth scroll-based ani
 ## 🌐 Live Demo
 ```md
 👉 https://your-portfolio.vercel.app
-
+```
 ---
 ## 🤝 Contributing
 
