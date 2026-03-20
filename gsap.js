@@ -1,75 +1,64 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
-// main section
-gsap.from(".hero-text", {
-  y: 100,
-  opacity: 0,
-  duration: 1.5
-});
-
-
-// GROUP 1 
-gsap.from(".group1 .project-card", {
-  x: -150,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".group1",
-    start: "top 80%"
-  }
-});
-
-
-// GROUP 2
-gsap.from(".group2 .project-card", {
-  x: 150,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".group2",
-    start: "top 80%"
-  }
-});
-
-
-// GROUP 3 
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".group3",
-    start: "top top",
-    end: "+=100%",
-    scrub: true,
-    pin: true
-  }
-});
-
-tl.from(".group3 h1", { scale: 0.5, opacity: 0 })
-  .to(".group3 h1", { scale: 1.5 });
-
-
-  // navbar
-document.querySelectorAll(".nav a").forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    gsap.to(window, {
-      scrollTo: link.getAttribute("href"),
-      duration: 1
-    });
+// 🔥 GROUP 1 → Fade + Slide
+gsap.utils.toArray(".group1").forEach((section) => {
+  gsap.from(section, {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+    }
   });
 });
 
 
-//page next
-document.querySelectorAll(".btn").forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const url = link.href;
-
-    gsap.to("body", {
-      opacity: 0,
-      duration: 0.5,
-      onComplete: () => window.location.href = url
-    });
+// 🔥 GROUP 2 → Parallax
+gsap.utils.toArray(".group2").forEach((section) => {
+  gsap.from(section, {
+    x: -150,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+          toggleActions: "play reverse play reverse"
+    }
   });
+});
+
+gsap.utils.toArray(".group4").forEach((section) => {
+  gsap.from(section, {
+    x: 150,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: section,
+      start: "top 80%",
+    }
+  });
+});
+
+
+
+// 🔥 GROUP 3 → Pin + Timeline
+gsap.utils.toArray(".group3").forEach((section) => {
+  
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top top",
+      end: "+=100%",
+      scrub: true,
+      pin: true,
+    }
+  });
+
+  tl.from(section, { scale: 0.8, opacity: 0 })
+    .to(section, { scale: 1.1 })
+    .to(section, { opacity: 0 });
 });

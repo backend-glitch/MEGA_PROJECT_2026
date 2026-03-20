@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk:MORF@15&family=Kalnia+Glaze:wght@100..700&display=swap');
+
+body,html{
+    width : 100%;
+    height : 100%;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ background : linear-gradient(to right ,green, lightgreen);
+
+}
+
+H1{
+   font-family: "Honk", system-ui;
+   font-size: 50PX;
+
+   word-spacing: 1px;
+}
+
+.card {
+    /* border : 1px solid white; */
+
+   backdrop-filter: blur(20px);
+   background: rgba(0, 0, 0, 0.3);
+
+    width : 400px;
+    height: 500px;
+
+display: flex;
+flex-direction: column;
+
+align-items: center;
+justify-content: space-evenly;
+
+  border-radius: 10px;
+}
+
+#counter{
+      font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+    font-size: 70px;
+    font-weight: bold;
+
+    color : black;
+
+    margin-bottom: 50px;
+}
+
+.btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap : 40px;
+
+}
+
+#increasebtn{
+
+    height : 60px;
+
+    border-radius: 10px;
+   border: none;
+
+   padding : 5px 10px;
+
+   text-transform: uppercase;
+   font-weight: bold;
+
+   color : white;
+   background-color: lightcoral;
+}
+
+#increasebtn:hover{
+    background-color: red;
+    color : lightcoral;
+
+    transform: scale(1.1);
+}
+
+#resetbtn{
+
+    height : 60px;
+
+    border-radius: 10px;
+   border: none;
+
+   padding : 5px 15px;
+
+   text-transform: uppercase;
+   font-weight: bold;
+
+   color : white;
+   background-color: yellowgreen;
+}
+
+#resetbtn:hover{
+    background-color: green;
+    color : yellowgreen;
+
+        transform: scale(1.1);
+}
+
+#decreasebtn{
+
+    height : 60px;
+
+    border-radius: 10px;
+   border: none;
+
+   padding : 5px 10px;
+
+   text-transform: uppercase;
+   font-weight: bold;
+
+   color : white;
+   background-color: orangered;
+}
+
+#decreasebtn:hover{
+  background-color: orange;
+  color : orangered;
+
+      transform: scale(1.1);
+}
