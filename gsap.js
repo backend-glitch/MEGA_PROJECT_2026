@@ -1,7 +1,24 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
-// 🔥 GROUP 1 → Fade + Slide
+
+
+let sections = gsap.utils.toArray(".panel");
+
+gsap.to(sections, {
+  xPercent: -86 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".group1-wrapper",
+    pin: true,
+    scrub: 1,
+    end: () => "+=" + document.querySelector(".group1-container").offsetWidth
+  }
+});
+
+
+
+// group 1
 gsap.utils.toArray(".group1").forEach((section) => {
   gsap.from(section, {
     opacity: 0,
@@ -15,7 +32,7 @@ gsap.utils.toArray(".group1").forEach((section) => {
 });
 
 
-// 🔥 GROUP 2 → Parallax
+// froup 2
 gsap.utils.toArray(".group2").forEach((section) => {
   gsap.from(section, {
     x: -150,
@@ -45,7 +62,7 @@ gsap.utils.toArray(".group4").forEach((section) => {
 
 
 
-// 🔥 GROUP 3 → Pin + Timeline
+// group 3
 gsap.utils.toArray(".group3").forEach((section) => {
   
   let tl = gsap.timeline({
@@ -61,4 +78,28 @@ gsap.utils.toArray(".group3").forEach((section) => {
   tl.from(section, { scale: 0.8, opacity: 0 })
     .to(section, { scale: 1.1 })
     .to(section, { opacity: 0 });
+});
+
+
+
+
+
+// project transitiom
+document.querySelectorAll(".project-link").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const url = link.getAttribute("href");
+
+    // Animate OUT
+    gsap.to("body", {
+      opacity: 0,
+      y: -50,
+      duration: 0.5,
+      ease: "power2.inOut",
+      onComplete: () => {
+        window.location.href = url;
+      }
+    });
+  });
 });

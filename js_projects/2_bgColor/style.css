@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk:MORF@15&family=Kalnia+Glaze:wght@100..700&display=swap');
+
+*{
+    margin : 0;
+    padding :0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to left,blue,cyan);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition : background-color 0.5 ease;
+
+    height: 100vh;
+}
+
+.card{
+
+    margin-top: 50px;
+    width : 400px;
+    height : 600px;
+
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    flex-direction: column;
+
+    background : rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+
+
+}
+
+.heading{
+       font-family: "Honk", system-ui;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+p{
+    font-family: "Kalnia Glaze";
+    font-size: 30px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.btn-group{
+    gap: 50px;
+}
+
+#btn{
+    border : none;
+    border-radius: 12px;
+
+    padding : 20px 20px;
+    margin : 10px 0;
+
+    font-weight: bold;
+
+
+}
+
+#btn:hover{
+    opacity: 0.9;
+
+    transform: scale(0.9);
+
+    box-shadow: 5px 5px 0px 0px black;
+
+    cursor: pointer;
+}
+
+#stats{
+      border : none;
+    border-radius: 12px;
+
+    padding : 20px 20px;
+    margin : 10px 0;
+
+    font-weight: bold;
+
+    margin-left: 30px;
+}
+
+#stats:hover{
+    opacity: 0.9;
+
+    transform: scale(0.9);
+
+    box-shadow: 5px 5px 0px 0px black;
+
+    cursor: pointer;
+}
+
+ #codeBox {
+      margin-top: 10px;
+
+      padding: 10px;
+      background: rgba(255,255,255,0.8);
+
+      border-radius: 5px;
+
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
