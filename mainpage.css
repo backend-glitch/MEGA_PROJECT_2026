@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee+Spice&family=Combo&family=Honk:MORF@15&family=Kalnia+Glaze:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.main-logo{
+    font-size: 3rem;
+
+   font-family: "Bungee Shade", sans-serif;
+
+    position: fixed;
+    top : 2rem;
+    left : 2rem;
+
+    z-index: 10000;
+
+}
+
+.main-head{
+      font-family: "Montserrat", sans-serif;
+      font-weight: lighter;
+
+      font-size: 10rem;
+
+      position: absolute;
+      bottom : -7rem;
+      left : 9rem;
+
+      white-space: none;
+      word-spacing: 3rem;
+}
+
+.container{
+    margin-bottom: 10rem;
+}
+
+.sub-head{
+    text-align: center;
+
+    font-size: 5rem;
+
+    font-family: "Combo", system-ui;
+}
+
+#animated-text{
+    text-align: center;
+    font-size: 7rem;
+    font-family: "Combo", system-ui;
+
+    overflow: hidden;
+    background: linear-gradient(90deg, red,orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub-p{
+    text-align: center;
+    font-family: "Combo", system-ui;;
+}
+
+span{
+
+    display: inline-block;
+
+    color : orangered;
+/*     
+    background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ color:transparent;
+ 
+ background: linear-gradient(to right, red,orange); */
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+    height: 50px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #00bfff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.github-logo{
+       font-size: 3rem;
+ 
+       font-size: 3rem;
+   font-family: "Bungee Shade", sans-serif;
+
+    position: fixed;
+    bottom : 2rem;
+    right : 2rem;
+
+
+    width : 50px;
+    height : 50px;
+
+    z-index: 10000;
+}
+
+.gitlogo{
+    color : white;
+
+}
+
+.gitlogo:hover{
+    color : black;
+}
+
+.navbar{
+    
+    position: absolute;
+      top : 2rem;
+    right : 2rem;
+
+    
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+
+    border-radius: 15px;
+    
+    padding : 0px 10px  0px 10px;
+}
+
+
+
+ul {
+     
+    display: flex;
+    flex-direction: row;
+
+    gap : 20px;
+
+    font-size: 1rem;
+
+    
+}
+.navbar ul li{
+
+ 
+    list-style-type: none;
+
+    padding : 15px 15px;
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: background 1s linear;
+
+}
+
+.navbar ul li:hover{
+    color : orangered;
+    cursor: pointer;
+
+    background : linear-gradient(to top ,orange,rgb(214, 148, 7));
+
+}

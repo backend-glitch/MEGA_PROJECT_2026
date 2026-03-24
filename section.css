@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk:MORF@15&family=Kalnia+Glaze:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -85,24 +87,57 @@ margin-right: 50px;
   box-align: center;
 }
 
+/* card btn */
 .btn {
+  
+  position : relative;
+  width : max-content;
+
   font-size: 1rem;
+  font-weight: bold;
+
   border-radius: 10px;
   display: inline-block;
   margin-top: 10px;
   padding: 5px 10px;
-  background: cyan;
-  color: black;
+  background: linear-gradient(to right , pink,violet);
+  color: WHITE;
   text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
 
   margin: 0px 20px;
 
   padding: 10px 10px;
 
+  z-index:1 ;
+
   text-transform: uppercase;
 }
 
+.btn::after{
+  content: "";
+  position: absolute;
 
+  border-radius : 10px;
+
+  z-index: -1;
+
+  width: 0;
+  height : 100%;
+
+  left : 0;
+  top : 0;
+
+  background: linear-gradient(to right ,blue,lightblue);
+
+  transition: width 0.4s linear;
+
+}
+
+.btn:hover::after{
+  width : 100%;
+}
 
 
 
@@ -131,4 +166,9 @@ margin-right: 50px;
   font-size: 3rem;
   background: linear-gradient(to top, rgb(186,189,67), rgb(232,11,117));
   color: white;
+}
+
+
+.group-main{
+  background: linear-gradient(to right, rgb(52,162,210), rgb(237,36,160));
 }
