@@ -27,6 +27,22 @@
       word-spacing: 3rem;
 }
 
+
+.main-head-2{
+      font-family: "Montserrat", sans-serif;
+      font-weight: lighter;
+
+      font-size: 10rem;
+
+      position: absolute;
+      bottom : -7rem;
+      left : 60rem;
+
+      white-space: none;
+      word-spacing: 3rem;
+}
+
+
 .container{
     margin-bottom: 10rem;
 }
@@ -139,11 +155,17 @@ ul {
 
     font-size: 1rem;
 
+    position: relative;
+
     
 }
+
+
+
 .navbar ul li{
 
  
+
     list-style-type: none;
 
     padding : 15px 15px;
@@ -161,4 +183,38 @@ ul {
 
     background : linear-gradient(to top ,orange,rgb(214, 148, 7));
 
+}
+
+.moving-ball{
+    display: inline;
+
+    position: relative;
+    color : red;
+
+       font-family: "Montserrat", sans-serif;
+      font-weight: lighter;
+
+      font-size: 10rem;
+
+      position: absolute;
+      bottom : -7rem;
+      left : 52rem;
+
+      white-space: none;
+      word-spacing: 3rem;
+}
+
+
+.shadow {
+    width: 80px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    position: absolute;
+   
+    transform: scaleX(0.8);
+
+    
+      top : 42rem;
+     left : 54rem;
 }
